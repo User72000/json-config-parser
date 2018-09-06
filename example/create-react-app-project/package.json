@@ -1,11 +1,11 @@
 {
   "name": "create-react-app-project",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-json-editor-ajrm": "^2.5.4",
+    "react-json-editor-ajrm": "/home/koushindra/projects/other_code/react-json-editor-ajrm/react-json-editor-ajrm-2.5.5.tgz",
     "react-scripts": "1.1.5"
   },
   "scripts": {
