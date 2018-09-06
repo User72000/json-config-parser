@@ -1,6 +1,6 @@
 {
   "name": "react-json-editor-ajrm",
-  "version": "2.5.4",
+  "version": "2.5.5",
   "description": "A stylish, editor-like, modular, react component for viewing, editing, and debugging javascript object syntax!",
   "author": "andrew.redican.mejia@gmail.com",
   "license": "MIT",
@@ -16,6 +16,7 @@
   "scripts": {
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate",
+    "start": "webpack-dev-server webpack.config-dev.js",
     "test": "npm run test:start && npm run test:clear",
     "test:start": "cross-env NODE_ENV=test BABEL_ENV=modules:commonjs jest --updateSnapshot",
     "test:clear": "del-cli test/__snapshots__",
@@ -107,9 +108,12 @@
     "react": ">=16.2.0",
     "react-dom": ">=16.2.0",
     "react-test-renderer": "^16.4.1",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "webpack": "^4.17.2",
+    "webpack-dev-server": "^3.1.7"
   },
   "dependencies": {
-    "@babel/runtime": "^7.0.0-rc.0"
+    "@babel/runtime": "^7.0.0-rc.0",
+    "webpack-cli": "^3.1.0"
   }
 }

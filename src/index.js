@@ -553,7 +553,9 @@ class JSONInput extends Component {
         const viewOnly = !!this.props.viewOnly;
         const ctrlOrMetaIsPressed = event.ctrlKey || event.metaKey;
 
+        console.log("onKeyDown----",event.key);
         switch(event.key){
+
             case 'Tab':
                 this.stopEvent(event);
                 if (viewOnly) break;
@@ -569,6 +571,7 @@ class JSONInput extends Component {
                 this.setUpdateTime();
                 break;
             case 'a'         : case 'c'          :
+                console.log("a or c",viewOnly, "---", ctrlOrMetaIsPressed)
                 if (viewOnly && !ctrlOrMetaIsPressed) this.stopEvent(event);
                 break;
             default : 
@@ -600,8 +603,10 @@ class JSONInput extends Component {
         const contentID = this.contentID;
         document.getElementById(contentID).addEventListener('paste', e => {
             e.preventDefault();
+            //customized
             var text = e.clipboardData.getData('text/plain');
-            document.execCommand('insertHTML', false, text);
+            let minifiedJson = JSON.stringify(JSON.parse(text));
+            document.execCommand('insertHTML', false, minifiedJson);
         });
         this.showPlaceholder();
     }

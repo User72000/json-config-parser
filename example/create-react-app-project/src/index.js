@@ -25,8 +25,8 @@ import "./index.css";
 //import locale     from '../../dist/locale/en';
 
 //Using source code
-import JSONInput from "/home/koushindra/projects/other_code/react-json-editor-ajrm/src/index";
-import locale from "/home/koushindra/projects/other_code/react-json-editor-ajrm/src/locale/en";
+import JSONInput from "../node_modules/react-json-editor-ajrm/dist/es/index";
+import locale from "../node_modules/react-json-editor-ajrm/dist/es/locale/en";
 
 /**
  * Import some data. This is a sample object, which will be passed down to JSONInput placeholder properperties.
