@@ -4,8 +4,9 @@
   "private": true,
   "dependencies": {
     "react": "^16.4.2",
+
     "react-dom": "^16.4.2",
-    "json-parser": "/home/koushindra/projects/other_code/react-json-editor-ajrm/json-parser-1.0.2.tgz",
+    "black-box-editor": "/home/koushindra/projects/other_code/react-json-editor-ajrm/black-box-editor-1.0.1.tgz",
     "react-scripts": "1.1.5"
   },
   "scripts": {

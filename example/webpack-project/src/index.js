@@ -38,7 +38,7 @@ class App extends Component {
         <JSONInput
           id="unique_string" // an id is required
           placeholder={sampleData} // data to display
-          theme="light_mitsuketa_tribute"
+          theme="dark_vscode_tribute"
           locale={locale}
           colors={{
             string: "#DAA520" // overrides theme colors with whatever color value you want

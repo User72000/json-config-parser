@@ -1,13 +1,9 @@
 {
-  "name": "json-config-parser",
-  "version": "1.0.2",
-  "description": "A stylish, editor-like, modular, react component for viewing, editing, and debugging javascript object syntax!",
-  "author": "andrew.redican.mejia@gmail.com",
-  "license": "MIT",
-  "homepage": "https://github.com/AndrewRedican/json-parser#readme",
-  "bugs": {
-    "url": "https://github.com/AndrewRedican/json-parser/issues"
-  },
+  "name": "black-box-editor",
+  "version": "1.0.1",
+  "author": "Koushindra",
+  "license": "83incs",
+
   "main": "index.js",
   "sideEffects": false,
   "scripts": {
