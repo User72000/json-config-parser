@@ -1,5 +1,5 @@
 {
-  "name": "json-parser",
+  "name": "json-config-parser",
   "version": "1.0.2",
   "description": "A stylish, editor-like, modular, react component for viewing, editing, and debugging javascript object syntax!",
   "author": "andrew.redican.mejia@gmail.com",
