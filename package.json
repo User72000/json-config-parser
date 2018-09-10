@@ -1,17 +1,14 @@
 {
-  "name": "react-json-editor-ajrm",
-  "version": "2.5.5",
+  "name": "json-parser",
+  "version": "1.0.2",
   "description": "A stylish, editor-like, modular, react component for viewing, editing, and debugging javascript object syntax!",
   "author": "andrew.redican.mejia@gmail.com",
   "license": "MIT",
-  "homepage": "https://github.com/AndrewRedican/react-json-editor-ajrm#readme",
+  "homepage": "https://github.com/AndrewRedican/json-parser#readme",
   "bugs": {
-    "url": "https://github.com/AndrewRedican/react-json-editor-ajrm/issues"
+    "url": "https://github.com/AndrewRedican/json-parser/issues"
   },
   "main": "index.js",
-  "files": [
-    "*"
-  ],
   "sideEffects": false,
   "scripts": {
     "contributors:add": "all-contributors add",
@@ -49,35 +46,6 @@
       "enzyme-to-json/serializer"
     ]
   },
-  "repository": "git@github.com:AndrewRedican/react-json-editor-ajrm.git",
-  "keywords": [
-    "react-json-editor-ajrm",
-    "ajrm",
-    "react json editor",
-    "json",
-    "input box",
-    "editor",
-    "react-json",
-    "json editor",
-    "json debug",
-    "json schema",
-    "json parser",
-    "json viewer",
-    "json validator",
-    "mitsuketajs.org",
-    "mitsuketa",
-    "javascript object viewer",
-    "javascript object notation",
-    "json validator",
-    "javascript object syntax validator",
-    "react",
-    "component",
-    "syntax editor",
-    "nosql",
-    "wysiwyg",
-    "WYSIWYG",
-    "what you see is what you get"
-  ],
   "peerDependencies": {
     "react": ">=16.2.0",
     "react-dom": ">=16.2.0"

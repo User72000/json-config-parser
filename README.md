@@ -1,6 +1,6 @@
-# react-json-editor-ajrm
+# json-parser
 
-![npm](https://img.shields.io/npm/v/react-json-editor-ajrm.svg) ![Build Status](https://travis-ci.com/AndrewRedican/react-json-editor-ajrm.svg?branch=master) ![npm](https://img.shields.io/npm/dm/react-json-editor-ajrm.svg) [![Known Vulnerabilities](https://snyk.io/test/github/AndrewRedican/react-json-editor-ajrm/badge.svg)](https://snyk.io/test/github/{username}/{repo}) [![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors)
+![npm](https://img.shields.io/npm/v/json-parser.svg) ![Build Status](https://travis-ci.com/AndrewRedican/json-parser.svg?branch=master) ![npm](https://img.shields.io/npm/dm/json-parser.svg) [![Known Vulnerabilities](https://snyk.io/test/github/AndrewRedican/json-parser/badge.svg)](https://snyk.io/test/github/{username}/{repo}) [![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors)
 
 <p align="center"><img src=https://i.imgur.com/ewtebIW.gif><br /><br />A stylish, editor-like, modular, react component for viewing, editing, and debugging javascript object syntax!</p>
 
@@ -9,14 +9,14 @@
 - Using node package manager:
 
 ```
-   $ npm i --save react-json-editor-ajrm
+   $ npm i --save json-parser
 ```
 
 ## How to Use
 
 ```
-    import JSONInput from 'react-json-editor-ajrm';
-    import locale    from 'react-json-editor-ajrm/locale/en';
+    import JSONInput from 'json-parser';
+    import locale    from 'json-parser/locale/en';
 
     <JSONInput
         id          = 'a_unique_id'
@@ -27,7 +27,7 @@
     />
 ```
 
-*Hint*: There are two different root paths: `react-json-editor-ajrm` and `react-json-editor-ajrm/es`. The first contains polyfilled ES5 code, the second unpolyfilled ES6. If you are unsure of which one you need/want, pick the first - it has the best compatibility with tools and browsers.
+*Hint*: There are two different root paths: `json-parser` and `json-parser/es`. The first contains polyfilled ES5 code, the second unpolyfilled ES6. If you are unsure of which one you need/want, pick the first - it has the best compatibility with tools and browsers.
 
 ## Examples
 
@@ -39,10 +39,10 @@ The `./examples` folder contains two examples:
 ## Testing right away!
 
 1. Fork and/or clone this Github repository
-2. Go to an example project under [react-json-editor-ajrm/example](https://github.com/AndrewRedican/react-json-editor-ajrm/tree/master/example):
+2. Go to an example project under [json-parser/example](https://github.com/AndrewRedican/json-parser/tree/master/example):
 
 ```
-    $ cd path/to/repo/react-json-editor-ajrm/example/webpack-project
+    $ cd path/to/repo/json-parser/example/webpack-project
 ```
 
 3. Install example project dependencies:
@@ -61,9 +61,9 @@ The `./examples` folder contains two examples:
 
 ## Latest Spotlight Release Notes [v2.5.4] - September 6, 2018
 
-1. `Portuguese` locale is now supported. [Read More](https://github.com/AndrewRedican/react-json-editor-ajrm/wiki/Locale-Support)
+1. `Portuguese` locale is now supported. [Read More](https://github.com/AndrewRedican/json-parser/wiki/Locale-Support)
 2. [IE11](https://en.wikipedia.org/wiki/Internet_Explorer_11) is now also supported.
-2. A good heap of issues were fixed. Find more details in [Change Log](https://github.com/AndrewRedican/react-json-editor-ajrm/blob/master/CHANGELOG.md#254---2018-09-06)
+2. A good heap of issues were fixed. Find more details in [Change Log](https://github.com/AndrewRedican/json-parser/blob/master/CHANGELOG.md#254---2018-09-06)
 
 ## Upcoming Features
 
@@ -84,7 +84,7 @@ The `./examples` folder contains two examples:
 | Name                          | Description                                                                                                                                                                                                                                                                                     |   Type   | Required  |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------: | :-------: |
 | [id]()                        | A unique id to identify component.                                                                                                                                                                                                                                                              |  string  | Mandatory |
-| [locale]()                    | The locale of your editor. Import locales like this: `import locale from 'react-json-editor-ajrm/locale/en'`. [Learn More](https://github.com/AndrewRedican/react-json-editor-ajrm/wiki/Locale-Support)                                                                                         |  object  | Mandatory |
+| [locale]()                    | The locale of your editor. Import locales like this: `import locale from 'json-parser/locale/en'`. [Learn More](https://github.com/AndrewRedican/json-parser/wiki/Locale-Support)                                                                                         |  object  | Mandatory |
 | [placeholder]()               | Send a valid javascript object to be shown once when component is mounted.                                                                                                                                                                                                                      |  object  | Optional  |
 | [viewOnly]()                  | Send `true` if you would like for content shown not to be editable.                                                                                                                                                                                                                             | boolean  | Optional  |
 | [onChange]()                  | Whenever `onBlur` or `onKeyPress` events take place, it will return content values.                                                                                                                                                                                                             |  object  | Optional  |
@@ -94,7 +94,7 @@ The `./examples` folder contains two examples:
 | [onKeyPressUpdate]()          | Send `false` if you would like for component not to automatically update on key press.                                                                                                                                                                                                          | boolean  | Optional  |
 | [waitAfterKeyPress]()         | Amount of milliseconds to wait before re-rendering content after keypress. Value defaults to `1000` when not specified. In other words, component will update if there is no additional keystroke after the last one within 1 second. Less than `100` milliseconds does not makes a difference. |  number  | Optional  |
 | [modifyErrorText]()           | A custom function to modify the component's original warning text. This function will receive a single parameter of type `string` and must equally return a `string`.                                                                                                                           | function | Optional  |
-| [theme]()                     | Specify which [built-in theme](https://github.com/AndrewRedican/react-json-editor-ajrm/wiki/Built-In-Themes) to use.                                                                                                                                                                            |  string  | Optional  |
+| [theme]()                     | Specify which [built-in theme](https://github.com/AndrewRedican/json-parser/wiki/Built-In-Themes) to use.                                                                                                                                                                            |  string  | Optional  |
 | [colors]()                    | **Contains the following properties:**                                                                                                                                                                                                                                                          |  object  | Optional  |
 | colors.[default]()            | Hex color code for any symbols, like curly `braces`, and `comma`.                                                                                                                                                                                                                               |  string  | Optional  |
 | colors.[string]()             | Hex color code for tokens identified as `string` values.                                                                                                                                                                                                                                        |  string  | Optional  |
@@ -145,7 +145,7 @@ Whenever RJEA re-renders its content, any function passed onto `onChange` proper
 
 ## Built-In Themes
 
-RJEA supports built-in theme. Here is the [list](https://github.com/AndrewRedican/react-json-editor-ajrm/wiki/Built-In-Themes).
+RJEA supports built-in theme. Here is the [list](https://github.com/AndrewRedican/json-parser/wiki/Built-In-Themes).
 
 ## Built With
 
@@ -165,7 +165,7 @@ Thanks goes to these wonderful people :smile::
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars2.githubusercontent.com/u/24832471?v=4" width="100px;"/><br /><sub><b>Andrew Redican</b></sub>](https://github.com/AndrewRedican)<br />[📢](#talk-AndrewRedican "Talks") [💻](https://github.com/AndrewRedican/react-json-editor-ajrm/commits?author=AndrewRedican "Code") [🌍](#translation-AndrewRedican "Translation") [⚠️](https://github.com/AndrewRedican/react-json-editor-ajrm/commits?author=AndrewRedican "Tests") | [<img src="https://avatars3.githubusercontent.com/u/7840502?v=4" width="100px;"/><br /><sub><b>Patrick Sachs</b></sub>](https://patrick-sachs.de/)<br />[💻](https://github.com/AndrewRedican/react-json-editor-ajrm/commits?author=PatrickSachs "Code") [🌍](#translation-PatrickSachs "Translation") [⚠️](https://github.com/AndrewRedican/react-json-editor-ajrm/commits?author=PatrickSachs "Tests") | [<img src="https://avatars3.githubusercontent.com/u/37770361?v=4" width="100px;"/><br /><sub><b>Allan Kehl</b></sub>](https://allankehl.com)<br />[🌍](#translation-AllanKDeveloper "Translation") | [<img src="https://avatars3.githubusercontent.com/u/426051?v=4" width="100px;"/><br /><sub><b>esbenvb</b></sub>](https://github.com/esbenvb)<br />[📖](https://github.com/AndrewRedican/react-json-editor-ajrm/commits?author=esbenvb "Documentation") | [<img src="https://avatars2.githubusercontent.com/u/5831420?v=4" width="100px;"/><br /><sub><b>Markus Petrykowski</b></sub>](http://markus-petrykowski.de)<br />[💡](#example-PetrykowskiM "Examples") | [<img src="https://avatars0.githubusercontent.com/u/5797143?v=4" width="100px;"/><br /><sub><b>Rick Brunstedt</b></sub>](https://github.com/rickbrunstedt)<br />[💻](https://github.com/AndrewRedican/react-json-editor-ajrm/commits?author=rickbrunstedt "Code") |
+| [<img src="https://avatars2.githubusercontent.com/u/24832471?v=4" width="100px;"/><br /><sub><b>Andrew Redican</b></sub>](https://github.com/AndrewRedican)<br />[📢](#talk-AndrewRedican "Talks") [💻](https://github.com/AndrewRedican/json-parser/commits?author=AndrewRedican "Code") [🌍](#translation-AndrewRedican "Translation") [⚠️](https://github.com/AndrewRedican/json-parser/commits?author=AndrewRedican "Tests") | [<img src="https://avatars3.githubusercontent.com/u/7840502?v=4" width="100px;"/><br /><sub><b>Patrick Sachs</b></sub>](https://patrick-sachs.de/)<br />[💻](https://github.com/AndrewRedican/json-parser/commits?author=PatrickSachs "Code") [🌍](#translation-PatrickSachs "Translation") [⚠️](https://github.com/AndrewRedican/json-parser/commits?author=PatrickSachs "Tests") | [<img src="https://avatars3.githubusercontent.com/u/37770361?v=4" width="100px;"/><br /><sub><b>Allan Kehl</b></sub>](https://allankehl.com)<br />[🌍](#translation-AllanKDeveloper "Translation") | [<img src="https://avatars3.githubusercontent.com/u/426051?v=4" width="100px;"/><br /><sub><b>esbenvb</b></sub>](https://github.com/esbenvb)<br />[📖](https://github.com/AndrewRedican/json-parser/commits?author=esbenvb "Documentation") | [<img src="https://avatars2.githubusercontent.com/u/5831420?v=4" width="100px;"/><br /><sub><b>Markus Petrykowski</b></sub>](http://markus-petrykowski.de)<br />[💡](#example-PetrykowskiM "Examples") | [<img src="https://avatars0.githubusercontent.com/u/5797143?v=4" width="100px;"/><br /><sub><b>Rick Brunstedt</b></sub>](https://github.com/rickbrunstedt)<br />[💻](https://github.com/AndrewRedican/json-parser/commits?author=rickbrunstedt "Code") |
 | :---: | :---: | :---: | :---: | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 

@@ -8,8 +8,8 @@ import "./index.css";
  */
 
 //Using distribution version in node_modules
-//import JSONInput  from 'react-json-editor-ajrm';
-//import locale     from 'react-json-editor-ajrm/locale/en';
+//import JSONInput  from 'json-parser';
+//import locale     from 'json-parser/locale/en';
 
 //Using distribution version from project
 //import JSONInput  from '../../../dist';

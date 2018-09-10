@@ -5,7 +5,7 @@
   "dependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-json-editor-ajrm": "/home/koushindra/projects/other_code/react-json-editor-ajrm/react-json-editor-ajrm-2.5.5.tgz",
+    "json-parser": "/home/koushindra/projects/other_code/react-json-editor-ajrm/json-parser-1.0.2.tgz",
     "react-scripts": "1.1.5"
   },
   "scripts": {
