@@ -17,7 +17,6 @@ import "./index.css";
 
 //Using source code
 import JSONInput from "../../../src";
-import locale from "../../../src/locale/en";
 
 /**
  * Import some data. This is a sample object, which will be passed down to JSONInput placeholder properperties.
@@ -26,26 +25,39 @@ import locale from "../../../src/locale/en";
 import sampleData from "./sampledata";
 
 class App extends Component {
-  constructor(props) {
+  constructor(props){
     super(props);
-  }
+    this.state={
+        clearAll:false,
+    }
+}
+handleClearAll(){
+  this.setState({clearAll:true})
+}
+
   render() {
     /**
      * Rendering this JSONInput component with some properties
      */
     return (
-      <div style={{ maxWidth: "1400px", maxHeight: "100%" }}>
-        <JSONInput
-          id="unique_string" // an id is required
-          placeholder={sampleData} // data to display
-          theme="dark_vscode_tribute"
-          locale={locale}
-          colors={{
-            string: "#DAA520" // overrides theme colors with whatever color value you want
-          }}
-          height="550px"
-        />
-      </div>
+      <React.Fragment>
+          <div style={{ maxWidth: "1400px", maxHeight: "100%" }}>
+            <JSONInput
+              id="unique_string" // an id is required
+               // data to display
+              theme="dark_vscode_tribute"
+              clearAll={this.state.clearAll}
+              colors={{
+                string: "#DAA520" // overrides theme colors with whatever color value you want
+              }}
+              height="550px"
+            />
+          </div>
+          <div>
+                <button type="button" onClick={this.handleClearAll.bind(this)}>Clear All</button>
+          </div>
+      </React.Fragment>
+
     );
   }
 }
