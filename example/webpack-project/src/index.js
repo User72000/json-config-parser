@@ -27,16 +27,12 @@ import sampleData from "./sampledata";
 class App extends Component {
   constructor(props){
     super(props);
-
     this.state={
         clearAll:false,
-        data:sampleData
     }
 }
 handleClearAll(){
-  console.log("handleClearAll");
   this.setState({clearAll:true})
-
 }
 
   render() {

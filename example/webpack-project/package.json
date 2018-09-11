@@ -1,8 +1,7 @@
 {
   "name": "json-parser-example",
   "version": "1.6.5",
-  "description": "A simple website to showcase json-parser component",
-  "author": "andrew.redican.mejia@gmail.com",
+  "author": "Koushindra",
   "scripts": {
     "start": "cross-env NODE_ENV=development BABEL_ENV=modules:commonjs webpack-dev-server",
     "build": "cross-env NODE_ENV=production BABEL_ENV=modules:commonjs webpack"

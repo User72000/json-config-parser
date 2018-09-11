@@ -12,8 +12,7 @@ import React, {Component} from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 //Using source code
-import JSONInput from "../node_modules/json-parser/dist/es/index";
-import locale from "../node_modules/json-parser/dist/es/locale/en";
+import JSONInput from "../node_modules/black-box-editor/dist/es/index";
 /**
  * Import some data. This is a sample object, which will be passed down to JSONInput placeholder properperties.
  * You can use placeholder to show data once, after component has mounted.
@@ -44,7 +43,7 @@ class App extends Component {
     }
     handleClearAll(){
         console.log("handleClearAll");
-        this.setState({clearAll:true,data:new Object()})
+        this.setState({clearAll:true,data:{}})
 
     }
     render() {
@@ -57,7 +56,6 @@ class App extends Component {
                     <JSONInput
                         id="unique_string" // an id is required
                         theme="dark_vscode_tribute"
-                        locale={locale}
                         clearAll={this.state.clearAll}
                         colors={{
                             string: "#DAA520" // overrides theme colors with whatever color value you want
