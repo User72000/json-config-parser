@@ -9,8 +9,7 @@
   },
   "dependencies": {
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "json-parser": "^2.5.4"
+    "react-dom": "^16.2.0"
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
