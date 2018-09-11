@@ -1,0 +1,83 @@
+{
+  "name": "black-box-editor",
+  "version": "1.0.3",
+  "author": "Koushindra",
+  "license": "83incs",
+
+  "main": "index.js",
+  "sideEffects": false,
+  "scripts": {
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate",
+    "start": "webpack-dev-server webpack.config-dev.js",
+    "test": "npm run test:start && npm run test:clear",
+    "test:start": "cross-env NODE_ENV=test BABEL_ENV=modules:commonjs jest --updateSnapshot",
+    "test:clear": "del-cli test/__snapshots__",
+    "test:watch": "cross-env NODE_ENV=test BABEL_ENV=modules:commonjs jest --watch",
+    "test:coverage": "cross-env NODE_ENV=test BABEL_ENV=modules:commonjs jest --coverage",
+    "test:release": "npm run build && npm pack ./dist",
+    "build": "npm run build:commonjs && npm run build:es && npm run build:copy-files && npm run test",
+    "build:commonjs": "cross-env NODE_ENV=production BABEL_ENV=modules:commonjs babel ./src --out-dir ./dist/ --ignore *.test.js",
+    "build:es": "cross-env NODE_ENV=production BABEL_ENV=modules:es babel ./src --out-dir ./dist/es --ignore *.test.js",
+    "build:copy-files": "node ./scripts/copy-files.js",
+    "release": "npm run build && npm publish ./dist"
+  },
+  "jest": {
+    "verbose": true,
+    "modulePathIgnorePatterns": [
+      "<rootDir>/dist/"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/test/jest.transform.js"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "testURL": "http://localhost",
+    "setupFiles": [
+      "./test/jest.setup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
+  "peerDependencies": {
+    "react": ">=16.2.0",
+    "react-dom": ">=16.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-rc.0",
+    "@babel/core": "^7.0.0-beta.55",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-rc.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.0.0-rc.0",
+    "@babel/plugin-transform-object-assign": "^7.0.0-rc.0",
+    "@babel/plugin-transform-runtime": "^7.0.0-rc.0",
+    "@babel/preset-env": "^7.0.0-rc.0",
+    "@babel/preset-react": "^7.0.0-rc.0",
+    "all-contributors-cli": "^5.3.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.0.0-beta.4",
+    "babel-plugin-extensible-destructuring": "^4.2.3",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-transform-react-constant-elements": "^6.23.0",
+    "cross-env": "^5.2.0",
+    "del-cli": "^1.1.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
+    "fs-extra": "^7.0.0",
+    "jest": "^23.4.2",
+    "mitsuketa": "^1.4.3",
+    "react": ">=16.2.0",
+    "react-dom": ">=16.2.0",
+    "react-test-renderer": "^16.4.1",
+    "rimraf": "^2.6.2",
+    "webpack": "^4.17.2",
+    "webpack-dev-server": "^3.1.7"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0-rc.0",
+    "webpack-cli": "^3.1.0"
+  }
+}
