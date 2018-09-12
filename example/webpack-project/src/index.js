@@ -57,7 +57,7 @@ handleClearAll(){
                 <button type="button" onClick={this.handleClearAll.bind(this)}>Clear All</button>
           </div>
       </React.Fragment>
-     
+
     );
   }
 }
