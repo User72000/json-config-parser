@@ -533,8 +533,9 @@ class JSONInput extends Component {
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.clearAll) {
-            this.setState({clear: true});
-            this.update();
+            this.setState({clear: true},()=>{
+                this.update();
+            });
         } else {
             this.setState({clear: false})
         }
@@ -593,7 +594,7 @@ class JSONInput extends Component {
     }
 
     onKeyDown(event) {
-        const viewOnly = !!this.props.viewOnly;
+        let viewOnly = !!this.props.viewOnly;
         const ctrlOrMetaIsPressed = event.ctrlKey || event.metaKey;
 
         console.log("onKeyDown----", event.key);
@@ -616,9 +617,11 @@ class JSONInput extends Component {
             case 'ArrowDown'  :
                 this.setUpdateTime();
                 break;
-            case 'a'         :
-            case 'c'          :
-                console.log("a or c", viewOnly, "---", ctrlOrMetaIsPressed)
+            case 'a' :
+                viewOnly = ctrlOrMetaIsPressed ;
+                if (viewOnly) this.stopEvent(event);
+                break;
+            case 'c'  :
                 if (viewOnly && !ctrlOrMetaIsPressed) this.stopEvent(event);
                 break;
             default :
