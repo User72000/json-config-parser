@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "black-box-editor": "^1.0.5"
   },
   "devDependencies": {
     "cross-env": "^5.2.0",

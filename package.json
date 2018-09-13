@@ -1,9 +1,8 @@
 {
   "name": "black-box-editor",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "author": "Koushindra",
   "license": "83incs",
-
   "main": "index.js",
   "sideEffects": false,
   "scripts": {

@@ -16,8 +16,8 @@ import "./index.css";
 //import locale     from '../../../dist/locale/en';
 
 //Using source code
-import JSONInput from "../../../src";
-
+// import JSONInput from "../../../src";
+import JSONInput from "../node_modules/black-box-editor/dist/es/index"
 /**
  * Import some data. This is a sample object, which will be passed down to JSONInput placeholder properperties.
  * You can use placeholder to show data once, after component has mounted.
@@ -39,6 +39,7 @@ handleClearAll(){
     /**
      * Rendering this JSONInput component with some properties
      */
+    console.log("webPackProject")
     return (
       <React.Fragment>
           <div style={{ maxWidth: "1400px", maxHeight: "100%" }}>

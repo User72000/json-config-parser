@@ -42,7 +42,6 @@ class App extends Component {
         }
     }
     handleClearAll(){
-        console.log("handleClearAll");
         this.setState({clearAll:true,data:{}})
 
     }
